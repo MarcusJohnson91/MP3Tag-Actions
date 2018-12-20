@@ -1,0 +1,57 @@
+[#0]
+T=4
+F=_TAG
+1=(?:[\\s([{<]?)((?:Featuring|Feat|Ft|&|\\+)[:.-_,]?)(?:[\\s)\\]}>]?)
+2= Featuring: 
+3=0
+
+[#1]
+T=7
+F=%album%
+1=%album% Featuring: %composer%
+
+[#2]
+T=7
+F=%title%
+1=%title% Featuring: %composer%
+
+[#3]
+T=7
+F=%artist%
+1=%artist% Featuring: %composer%
+
+[#4]
+T=4
+F=TITLE
+1=(%album% Featuring: %composer%)(%composer%)
+2=%album% Featuring %composer% $2
+3=0
+
+[#5]
+T=4
+F=TITLE
+1=(%title% Featuring: %composer%)(%composer%)
+2=%title% Featuring %composer% $2
+3=0
+
+[#6]
+T=4
+F=TITLE
+1=(%artist% Featuring: %composer%)(%composer%)
+2=%artist% Featuring %composer% $2
+3=0
+
+[#7]
+T=4
+F=COMPOSER
+1=(?:[\\s([{<])(x)(?:[\\s)\\]}>])
+2=, 
+3=0
+
+[#8]
+T=4
+F=COMPOSER
+1=(?:[\\s([{<])(Featuring:|&|and|x)(?:[\\s)\\]}>])
+2=, 
+3=0
+
